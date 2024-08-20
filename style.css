@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    align-items: center;
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    font-family: Rubik;
+    justify-content: center;
+    padding: 50px;
+}
+
+.container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 24% 76%;
+    height: 515px;
+    width: 1110px;
+}
+
+.report-card {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+}
+
+.jeremy {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 20px;
+    color: white;
+    height: 65%;
+    padding: 30px 27px;
+    width: 100%;
+}
+
+.jeremy img {
+    border-radius: 50%;
+    border: 3px solid hsl(0, 0%, 100%);
+    height: 85px;
+    margin-bottom: 40px;
+    width: 85px;
+}
+
+.jeremy p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.jeremy h1 {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.buttons {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+}
+
+.buttons button {
+    background: none;
+    border: none;
+    color: hsla(0, 0%, 100%, 0.4);
+    cursor: pointer;
+    font-family: Rubik;
+    font-size: 1.2rem;
+}
+
+.buttons button.active {
+    color: hsl(0, 0%, 100%);
+}
+
+.buttons button:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+/* Stats Cards */
+
+.stats {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background-position: 90% -2%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.card>div {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.card>div:hover {
+    background-color: hsl(235, 45%, 61%);
+}
+
+.card>div>div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card>div>div>img {
+    cursor: pointer;
+    height: 5px;
+    width: 21px;
+}
+
+.card>div .content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card>div .time {
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
+.card>div .time+p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.card>div>div>img:hover {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(100%) saturate(12%) hue-rotate(237deg) brightness(103%) contrast(103%);
+}
+
+.work {
+    background-color: hsl(15, 100%, 70%);
+    background-image: url(./images/icon-work.svg);
+    background-position: 90% -6%;
+}
+
+.play {
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(./images/icon-play.svg);
+}
+
+.study {
+    background-color: hsl(348, 100%, 68%);
+    background-image: url(./images/icon-study.svg);
+}
+
+.exercise {
+    background-color: hsl(145, 58%, 55%);
+    background-image: url(./images/icon-exercise.svg);
+    background-position: 90% 0%;
+}
+
+.social {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url(./images/icon-social.svg);
+    background-position: 90% -12%;
+}
+
+.self {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url(./images/icon-self-care.svg);
+    background-position: 90% -4%;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        gap: 24px;
+        grid-template-columns: 1fr;
+        height: 90%;
+        padding: 0px 24px;
+        width: 100%;
+    }
+
+    .report-card {
+        min-height: 200px;
+    }
+
+    .jeremy {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .jeremy img {
+        height: 70px;
+        margin-bottom: 0;
+        width: 70px;
+    }
+
+    .jeremy .info h1 {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .stats {
+        gap: 24px;
+        grid-template-columns: 1fr;
+    }
+
+    .card:last-child {
+        margin-bottom: 50px;
+    }
+
+    .card {
+        height: 160px;
+    }
+
+    .card>div {
+        gap: 10px;
+        padding: 30px 20px;
+    }
+
+    .card>div .content {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .card>div .content .time {
+        font-size: 2.2rem;
+    }
+}
